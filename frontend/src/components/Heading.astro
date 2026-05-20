@@ -1,0 +1,20 @@
+---
+interface Props {
+    level?: "h1" | "h2";
+    className?: string;
+    title?: string;
+}
+
+const { level = "h1", className = "", ...props } = Astro.props;
+
+const Tag = level;
+
+const styles = {
+    h1: "text-center uppercase font-montserrat font-bold text-3xl sm:text-4xl md:text-5xl my-8",
+    h2: "text-center font-montserrat text-3xl sm:text-4xl md:text-5xl mb-8",
+}
+---
+
+<Tag class:list={[styles[level], className]} {...props}>
+    {Astro.props.title}
+</Tag>

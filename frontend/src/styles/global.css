@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-@import "@fontsource-variable/inter";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -47,8 +47,8 @@
     --radius-3xl: calc(var(--radius) * 2.2);
     --radius-4xl: calc(var(--radius) * 2.6);
     --color-fleury-pink: var(--fleury-pink);
-    --font-monserrat: var(--font-montserrat);
-    --font-libre-baskerville: var(--font-libre-baskerville);
+    --font-montserrat: "Montserrat", sans-serif;
+    --font-libre-baskerville: "Libre Baskerville", serif;
 }
 
 :root {
@@ -129,7 +129,7 @@
         @apply bg-background text-foreground;
     }
     html {
-        @apply font-sans;
+        @apply font-montserrat;
     }
 }
 
